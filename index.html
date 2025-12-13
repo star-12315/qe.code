@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致敬恩师杨强 | 师恩永铭，桃李天下</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #57cc99;
+            --accent: #ffd166;
+            --dark: #073b4c;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .navbar.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* 英雄区域 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(26, 95, 122, 0.9) 0%, rgba(7, 59, 76, 0.95) 100%), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path fill="%23ffffff" opacity="0.03" d="M42.3,-60.4C53.2,-51.4,59.3,-36.5,64.6,-21.6C69.8,-6.7,74.1,8.1,71.5,22.3C68.9,36.5,59.4,50.1,46.3,59.8C33.3,69.5,16.6,75.2,0.9,74.1C-14.8,73,-29.7,65.1,-42.2,55.1C-54.7,45.1,-64.8,33,-70.7,18.4C-76.5,3.9,-78.2,-13.1,-73.8,-28.6C-69.4,-44.1,-58.9,-58.1,-45.5,-66.5C-32.1,-74.9,-16,-77.7,0.2,-78C16.4,-78.2,32.7,-75.9,42.3,-60.4Z" transform="translate(100 100)"/></svg>');
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+        
+        .hero h1 .highlight {
+            color: var(--accent);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--dark);
+            box-shadow: 0 5px 15px rgba(255, 209, 102, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: #ffc145;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(255, 209, 102, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* 浮动元素动画 */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.1);
+            font-size: 2rem;
+        }
+        
+        /* 时间线部分 */
+        .section {
+            padding: 120px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* 时间线 */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 10px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: auto;
+            right: 0;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: -20px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 0 0 8px var(--light);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            right: auto;
+            left: -20px;
+        }
+        
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* 记忆画廊 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            color: white;
+            padding: 30px 20px 20px;
+            transform: translateY(30px);
+            transition: var(--transition);
+            opacity: 0;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .gallery-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        /* 祝福墙 */
+        .wishes-section {
+            background-color: #f8f9fa;
+        }
+        
+        .wish-form-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            flex: 1;
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(87, 204, 153, 0.2);
+        }
+        
+        .wish-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .wish-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border-top: 5px solid var(--accent);
+        }
+        
+        .wish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .wish-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .wish-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .wish-info h4 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .wish-info .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .wish-text {
+            font-style: italic;
+            line-height: 1.8;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid #f0f0f0;
+        }
+        
+        /* 感谢信部分 */
+        .letter-section {
+            background-color: white;
+        }
+        
+        .letter-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: var(--shadow);
+        }
+        
+        .letter-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .letter-content p {
+            margin-bottom: 20px;
+        }
+        
+        .letter-signature {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 40px;
+            font-size: 1.2rem;
+        }
+        
+        /* 引用部分 */
+        .quote-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .quote-icon {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
+            margin-bottom: 30px;
+        }
+        
+        .quote-text {
+            font-size: 2.2rem;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .quote-author {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-logo {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+        
+        .footer-title {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* 音乐播放器控件 */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .music-control {
+            background-color: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .music-control:hover {
+            background-color: var(--dark);
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .music-control.playing {
+            background-color: var(--secondary);
+        }
+        
+        .music-control.playing i {
+            animation: pulse 2s infinite;
+        }
+        
+        .music-info {
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 15px;
+            max-width: 300px;
+            transform-origin: bottom right;
+            transform: scale(0);
+            opacity: 0;
+            transition: var(--transition);
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .music-info.active {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .music-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        
+        .music-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .volume-slider {
+            flex-grow: 1;
+            height: 5px;
+            -webkit-appearance: none;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            cursor: pointer;
+        }
+        
+        .music-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-icon {
+                left: 11px;
+                right: auto;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: 11px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .letter-container {
+                padding: 40px 30px;
+            }
+            
+            .music-player {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .music-control {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .quote-text {
+                font-size: 1.8rem;
+            }
+            
+            .letter-container {
+                padding: 30px 20px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .music-player {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .music-info {
+                max-width: 250px;
+            }
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>师恩永铭</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#timeline">时光记忆</a>
+                <a href="#memories">回忆相册</a>
+                <a href="#wishes">祝福墙</a>
+                <!-- 已删除"感谢信"链接 -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="floating-elements">
+            <!-- 浮动元素将通过JS动态生成 -->
+        </div>
+        <div class="hero-content">
+            <h1>致敬 <span class="highlight">杨强</span> 老师</h1>
+            <p class="animate__animated animate__fadeInUp">桃李不言，下自成蹊。师恩难忘，永铭于心。</p>
+            <div class="hero-btns">
+                <!-- 只保留一个按钮 -->
+                <a href="#wishes" class="btn btn-primary">
+                    <i class="fas fa-heart"></i> 写下祝福
+                </a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#timeline">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 时间线部分 -->
+    <section class="section" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">时光记忆</h2>
+                <p class="section-subtitle">记录与杨强老师共度的美好时光与难忘瞬间</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年9月</div>
+                        <h3 class="timeline-title">初次相遇</h3>
+                        <p>第一次见到杨强老师，他站在讲台上，温和而坚定地介绍课程。他那富有感染力的声音和独特的教学方法立刻吸引了我们所有人。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年10月</div>
+                        <h3 class="timeline-title">惊喜时刻</h3>
+                        <p>在杨老师的悉心指导下，我们的平均成绩至年级第二。他不仅传授数学知识，更教会我们严谨的态度。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年11月</div>
+                        <h3 class="timeline-title">数学导师</h3>
+                        <p>面临期中考试的关键时刻，杨老师与我们促膝长谈，帮助我们找到解题方向。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025年12月</div>
+                        <h3 class="timeline-title">最后一课</h3>
+                        <p>最后一节数学课上，杨老师为我们讲解角度，他带着欣慰的笑容与我们道别。</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 记忆画廊 -->
+    <section class="section" id="memories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">回忆相册</h2>
+                <p class="section-subtitle">那些与杨强老师共同度过的珍贵瞬间</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                   <div class="gallery-img" style="background-image: url('https://s41.ax1x.com/2025/12/11/pZKyczq.jpg');"></div>
+                   <div class="gallery-overlay">
+                        <h3 class="gallery-title">生动的课堂</h3>
+                        <p>杨老师的课堂总是充满活力与启发</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background-image: url('images/classroom.jpg');"></div>
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">课后辅导</h3>
+                        <p>耐心解答每一个问题，从不厌烦</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                        <h3 class="gallery-title">团队项目</h3>
+                        <p>完成一个个有挑战性的项目</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background-color: #c7ceea;"></div>
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">合影时刻</h3>
+                        <p>最后的合影，永远的纪念</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 祝福墙 -->
+    <section class="section wishes-section" id="wishes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">祝福墙</h2>
+                <p class="section-subtitle">写下您对杨强老师的祝福与感谢</p>
+            </div>
+            
+            <div class="wish-form-container">
+                <h3 style="text-align: center; margin-bottom: 40px; color: var(--primary);">留下您的祝福</h3>
+                <form id="wishForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" class="form-control" placeholder="请输入您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="class">班级/届别</label>
+                            <input type="text" id="class" class="form-control" placeholder="例如：XX级X班" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="wish">祝福内容</label>
+                        <textarea id="wish" class="form-control" rows="5" placeholder="请写下您对杨强老师的祝福与感谢..." required></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" style="padding: 15px 50px;">
+                            <i class="fas fa-paper-plane"></i> 提交祝福
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="wish-wall" id="wishWall">
+                <!-- 祝福卡片将通过JS动态添加 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 感谢信部分 (直接显示，非模态框) -->
+    <section class="section letter-section" id="letter">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">致杨强老师的感谢信</h2>
+                <p class="section-subtitle">千言万语道不尽我们的感激之情</p>
+            </div>
+            <div class="letter-container">
+                <div class="letter-content">
+                    <p>敬爱的杨强老师：</p>
+                    <p>时光荏苒，岁月如梭。转眼间，我们即将告别熟悉的校园，踏上新的人生征程。在这离别之际，我们心中充满了对您的感激与不舍。</p>
+                    <p>回首过往，您不仅是传授知识的良师，更是我们人生道路上的引路人。您用渊博的学识点燃我们求知的火焰，用严谨的治学态度塑造我们科研的精神，用无私的关怀温暖我们成长的道路。</p>
+                    <p>记得您总是最早到教室，最晚离开办公室；记得您耐心解答我们每一个幼稚的问题；记得您在我们迷茫时给予的指引；记得您在我们取得成绩时露出的欣慰笑容。这些点点滴滴，早已深深烙印在我们的心中。</p>
+                    <p>您常说："教育不是灌输，而是点燃火焰。" 您正是这样一位点燃我们内心火焰的导师。您教会我们的不仅是专业知识，更是独立思考的能力、严谨求实的态度和面对困难的勇气。</p>
+                    <p>如今，我们即将各奔东西，但您的教诲将永远伴随我们前行。无论将来走到哪里，我们都会铭记您的教导，努力成为对社会有用的人，不辜负您的期望。</p>
+                    <p>千言万语道不尽我们的感激之情，唯愿您身体健康，工作顺利，桃李满天下！</p>
+                    <div class="letter-signature">
+                        您的学生们 敬上<br>
+                        XX年6月
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 引用部分 -->
+    <section class="quote-section">
+        <div class="container quote-container">
+            <div class="quote-icon">
+                <i class="fas fa-quote-right"></i>
+            </div>
+            <p class="quote-text">"教育是一棵树摇动另一棵树，一朵云推动另一朵云，一个灵魂唤醒另一个灵魂。"</p>
+            <p class="quote-author">—— 卡尔·雅斯贝尔斯</p>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">师恩永铭</div>
+                    <p>此网页由杨强老师的学生们共同创建，以表达对老师的深深感激与祝福。师恩难忘，我们将永远铭记老师的教诲。</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-title">快速链接</h3>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#timeline">时光记忆</a></li>
+                        <li><a href="#memories">回忆相册</a></li>
+                        <li><a href="#wishes">祝福墙</a></li>
+                        <!-- 已删除"感谢信"链接 -->
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">联系我们</h3>
+                    <ul>
+                        <li><i class="fas fa-users" style="margin-right: 10px;"></i> 杨强老师的学生们</li>
+                        <li><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> XX届毕业生</li>
+                        <li><i class="fas fa-heart" style="margin-right: 10px;"></i> 永远感激，永远祝福</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; XX 致敬杨强老师 | 师恩永铭，桃李天下 | 本页面仅为表达感激之情，非商业用途</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 音乐播放器 -->
+    <div class="music-player">
+        <div class="music-info" id="musicInfo">
+            <button class="music-close" id="closeMusicInfo">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="music-title">友谊地久天长</div>
+            <div class="music-subtitle">背景音乐</div>
+            <div class="volume-control">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" min="0" max="100" value="50" class="volume-slider" id="volumeSlider">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+        <div class="music-control" id="musicControl">
+            <i class="fas fa-play" id="musicIcon"></i>
+        </div>
+    </div>
+
+    <!-- 音频元素 -->
+    <audio id="backgroundMusic" loop>
+        <!-- 这里使用了一个适合感恩主题的免费背景音乐URL -->
+        <!-- 如果音乐无法播放，可以替换为其他URL或本地文件 -->
+        <source src="https://assets.mixkit.co/music/preview/mixkit-piano-melody-1-123.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化祝福墙
+            initWishWall();
+            
+            // 初始化浮动元素
+            initFloatingElements();
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // 祝福表单提交
+            document.getElementById('wishForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const className = document.getElementById('class').value;
+                const wish = document.getElementById('wish').value;
+                
+                if (name && className && wish) {
+                    addWishCard(name, className, wish);
+                    
+                    // 清空表单
+                    document.getElementById('wishForm').reset();
+                    
+                    // 显示成功消息
+                    showMessage('祝福已成功提交！感谢您的留言。', 'success');
+                    
+                    // 滚动到新添加的祝福
+                    document.querySelector('.wish-wall').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 初始化动画
+            initAnimations();
+            
+            // 初始化音乐播放器
+            initMusicPlayer();
+        });
+        
+        // 初始化祝福墙
+        function initWishWall() {
+            const wishWall = document.getElementById('wishWall');
+            const wishes = [
+                { name: '张明', class: '2019级计算机1班', wish: '杨老师，感谢您在我迷茫时的指引，您是我人生中最重要的一位导师！' },
+                { name: '李华', class: '2020级软件工程2班', wish: '永远忘不了您深夜还在为我们批改作业的身影，祝您身体健康，桃李满天下！' },
+                { name: '王芳', class: '2021级数据科学班', wish: '您的课堂总是充满智慧和启发，感谢您为我们打开了知识的大门！' },
+                { name: '刘强', class: '2018级网络工程班', wish: '毕业多年，依然记得您的教诲，祝杨老师工作顺利，家庭幸福！' },
+                { name: '陈静', class: '2022级人工智能班', wish: '杨老师，您不仅教会了我们知识，更教会了我们做人的道理，万分感谢！' },
+                { name: '赵伟', class: '2019级计算机3班', wish: '师恩难忘，愿杨老师永远年轻，永远充满活力，继续照亮更多学子的路！' }
+            ];
+            
+            wishes.forEach(wish => {
+                addWishCard(wish.name, wish.class, wish.wish);
+            });
+        }
+        
+        // 添加祝福卡片
+        function addWishCard(name, className, wish) {
+            const wishWall = document.getElementById('wishWall');
+            const colors = ['#1a5f7a', '#57cc99', '#ffd166', '#ef476f', '#118ab2'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            const wishCard = document.createElement('div');
+            wishCard.className = 'wish-card';
+            wishCard.innerHTML = `
+                <div class="wish-header">
+                    <div class="wish-avatar" style="background-color: ${randomColor}">
+                        ${name.charAt(0)}
+                    </div>
+                    <div class="wish-info">
+                        <h4>${name}</h4>
+                        <div class="date">${className} • ${getCurrentDate()}</div>
+                    </div>
+                </div>
+                <div class="wish-text">${wish}</div>
+            `;
+            
+            wishWall.prepend(wishCard);
+        }
+        
+        // 获取当前日期
+        function getCurrentDate() {
+            const now = new Date();
+            return `${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日`;
+        }
+        
+        // 初始化浮动元素
+        function initFloatingElements() {
+            const floatingContainer = document.querySelector('.floating-elements');
+            const icons = ['fa-book', 'fa-graduation-cap', 'fa-chalkboard', 'fa-lightbulb', 'fa-heart', 'fa-star', 'fa-award', 'fa-certificate'];
+            
+            for (let i = 0; i < 15; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.innerHTML = `<i class="fas ${icons[Math.floor(Math.random() * icons.length)]}"></i>`;
+                
+                // 随机位置和大小
+                const size = Math.random() * 40 + 20;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const duration = Math.random() * 20 + 20;
+                const delay = Math.random() * 5;
+                
+                element.style.fontSize = `${size}px`;
+                element.style.left = `${posX}%`;
+                element.style.top = `${posY}%`;
+                element.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+                
+                floatingContainer.appendChild(element);
+            }
+            
+            // 添加浮动动画关键帧
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes float {
+                    0% { transform: translate(0, 0) rotate(0deg); }
+                    100% { transform: translate(${Math.random()*30-15}px, ${Math.random()*30-15}px) rotate(${Math.random()*10-5}deg); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // 显示消息
+        function showMessage(text, type) {
+            // 创建消息元素
+            const message = document.createElement('div');
+            message.className = `message ${type}`;
+            message.textContent = text;
+            message.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                padding: 15px 25px;
+                background-color: ${type === 'success' ? '#57cc99' : '#ef476f'};
+                color: white;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 3000;
+                animation: slideInRight 0.3s ease, fadeOut 0.3s ease 2.7s forwards;
+            `;
+            
+            document.body.appendChild(message);
+            
+            // 3秒后移除
+            setTimeout(() => {
+                if (message.parentNode) {
+                    message.parentNode.removeChild(message);
+                }
+            }, 3000);
+            
+            // 添加动画关键帧
+            const style = document.createElement('style');
+            if (!document.querySelector('#message-animations')) {
+                style.id = 'message-animations';
+                style.innerHTML = `
+                    @keyframes slideInRight {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes fadeOut {
+                        from { opacity: 1; }
+                        to { opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        // 初始化动画
+        function initAnimations() {
+            // 使用Intersection Observer实现滚动动画
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // 观察需要动画的元素
+            document.querySelectorAll('.timeline-item, .gallery-item, .wish-card').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        // 初始化音乐播放器
+        function initMusicPlayer() {
+            const musicControl = document.getElementById('musicControl');
+            const musicIcon = document.getElementById('musicIcon');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            const volumeSlider = document.getElementById('volumeSlider');
+            const musicInfo = document.getElementById('musicInfo');
+            const closeMusicInfo = document.getElementById('closeMusicInfo');
+            
+            // 设置初始音量
+            backgroundMusic.volume = volumeSlider.value / 100;
+            
+            // 从localStorage读取音乐播放状态
+            const savedMusicState = localStorage.getItem('musicPlaying');
+            const savedVolume = localStorage.getItem('musicVolume');
+            
+            if (savedVolume) {
+                backgroundMusic.volume = savedVolume / 100;
+                volumeSlider.value = savedVolume;
+            }
+            
+            // 检查是否应该自动播放音乐（如果用户之前选择了播放）
+            if (savedMusicState === 'true') {
+                backgroundMusic.play().then(() => {
+                    musicControl.classList.add('playing');
+                    musicIcon.classList.remove('fa-play');
+                    musicIcon.classList.add('fa-pause');
+                }).catch(error => {
+                    console.log('自动播放被阻止：', error);
+                    // 如果自动播放失败，保持暂停状态
+                    musicControl.classList.remove('playing');
+                    musicIcon.classList.remove('fa-pause');
+                    musicIcon.classList.add('fa-play');
+                });
+            }
+            
+            // 音乐控制按钮点击事件
+            musicControl.addEventListener('click', function() {
+                if (backgroundMusic.paused) {
+                    backgroundMusic.play();
+                    musicControl.classList.add('playing');
+                    musicIcon.classList.remove('fa-play');
+                    musicIcon.classList.add('fa-pause');
+                    localStorage.setItem('musicPlaying', 'true');
+                } else {
+                    backgroundMusic.pause();
+                    musicControl.classList.remove('playing');
+                    musicIcon.classList.remove('fa-pause');
+                    musicIcon.classList.add('fa-play');
+                    localStorage.setItem('musicPlaying', 'false');
+                }
+            });
+            
+            // 音量控制
+            volumeSlider.addEventListener('input', function() {
+                backgroundMusic.volume = this.value / 100;
+                localStorage.setItem('musicVolume', this.value);
+            });
+            
+            // 显示/隐藏音乐信息
+            let musicInfoTimeout;
+            musicControl.addEventListener('mouseenter', function() {
+                clearTimeout(musicInfoTimeout);
+                musicInfo.classList.add('active');
+            });
+            
+            musicControl.addEventListener('mouseleave', function() {
+                musicInfoTimeout = setTimeout(() => {
+                    musicInfo.classList.remove('active');
+                }, 500);
+            });
+            
+            musicInfo.addEventListener('mouseenter', function() {
+                clearTimeout(musicInfoTimeout);
+            });
+            
+            musicInfo.addEventListener('mouseleave', function() {
+                musicInfoTimeout = setTimeout(() => {
+                    musicInfo.classList.remove('active');
+                }, 300);
+            });
+            
+            // 关闭音乐信息
+            closeMusicInfo.addEventListener('click', function(e) {
+                e.stopPropagation();
+                musicInfo.classList.remove('active');
+            });
+            
+            // 添加键盘快捷键支持
+            document.addEventListener('keydown', function(e) {
+                // 空格键控制播放/暂停
+                if (e.code === 'Space' && !e.target.matches('input, textarea')) {
+                    e.preventDefault();
+                    musicControl.click();
+                }
+                
+                // 上下箭头控制音量
+                if (e.code === 'ArrowUp' && !e.target.matches('input, textarea')) {
+                    e.preventDefault();
+                    let newVolume = Math.min(100, parseInt(volumeSlider.value) + 10);
+                    volumeSlider.value = newVolume;
+                    backgroundMusic.volume = newVolume / 100;
+                    localStorage.setItem('musicVolume', newVolume);
+                }
+                
+                if (e.code === 'ArrowDown' && !e.target.matches('input, textarea')) {
+                    e.preventDefault();
+                    let newVolume = Math.max(0, parseInt(volumeSlider.value) - 10);
+                    volumeSlider.value = newVolume;
+                    backgroundMusic.volume = newVolume / 100;
+                    localStorage.setItem('musicVolume', newVolume);
+                }
+            });
+        }
+    </script>
+</body>
+</html> 
