@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>告别与感谢</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            padding: 40px;
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        
+        .content {
+            padding: 10px 0 30px;
+        }
+        
+        .letter {
+            background-color: #f8fafc;
+            border-left: 4px solid #3498db;
+            padding: 30px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+        
+        .greeting {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .letter-content {
+            font-size: 1.05rem;
+            color: #444;
+        }
+        
+        .letter-content p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+            padding: 20px;
+            margin: 30px 0;
+            border-top: 1px dashed #e0e0e0;
+            border-bottom: 1px dashed #e0e0e0;
+            font-size: 1.1rem;
+        }
+        
+        /* 联系方式部分样式 */
+        .contact-section {
+            background: #f9fbfd;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid #e8f1f8;
+        }
+        
+        .contact-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .contact-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+            margin: 8px auto;
+            border-radius: 2px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            transition: all 0.3s ease;
+            border: 1px solid #edf2f7;
+            text-decoration: none;
+            color: #444;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.15);
+            border-color: #3498db;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .email-icon {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        .social-icon {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        
+        .website-icon {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        .work-icon {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .contact-label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .contact-info {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-align: center;
+        }
+        
+        .contact-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.95rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .highlight {
+            background-color: #fff9e6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .letter {
+                padding: 20px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .letter {
+                padding: 15px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .blossom {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .blossom-1 {
+            top: 20px;
+            right: 30px;
+            background: #3498db;
+            border-radius: 50% 20% 50% 30%;
+            transform: rotate(45deg);
+        }
+        
+        .blossom-2 {
+            bottom: 40px;
+            left: 30px;
+            background: #e74c3c;
+            border-radius: 30% 50% 20% 50%;
+            transform: rotate(20deg);
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blossom blossom-1"></div>
+        <div class="blossom blossom-2"></div>
+        
+        <div class="header">
+            <h1>告别与感谢</h1>
+            <p class="subtitle">致杨强老师的一封信</p>
+        </div>
+        
+        <div class="content">
+            <div class="letter">
+                <div class="greeting">尊敬的杨强老师：</div>
+                
+                <div class="letter-content">
+                    <p>时光荏苒，在您的教导下，我们度过了充实而难忘的学习时光。此刻，我们怀着深深的感激与不舍，向您表达最诚挚的感谢与祝福。</p>
+                    
+                    <p>您严谨的治学态度、深厚的专业素养和对教育事业的热情，深深影响着我们每一位同学。您不仅传授知识，更教会我们思考的方法和做人的道理。在您的课堂上，我们感受到知识的魅力，也体会到探索的乐趣。</p>
+                    
+                    <p>记得您总是耐心解答我们的疑问，无论是课堂上还是课后，您都会给予细致的指导。当我们在解题中遇到困难时，您提供了关键的建议；当我们感到迷茫时，您给予了宝贵的指引。这些点点滴滴，我们都铭记在心。</p>
+                    
+                    <p>在您的指导下，我们的数学能力得到了显著提升，我们的学习方法得到了优化。您的教诲像一盏明灯，照亮了我们前行的道路。</p>
+                    
+                    <p>虽然我们将要告别，但您给予我们的知识、智慧和品格将伴随我们一生。无论我们将来走到哪里，都会记得您这位引路人，记得您在讲台上的身影，记得您语重心长的教诲。</p>
+                    
+                    <p>感谢您无私的付出，感谢您为我们付出的心血和时间。在未来的日子里，我们会继续努力，不辜负您的期望，在各个领域做出自己的贡献。</p>
+                </div>
+                
+                <div class="signature">
+                    <p>敬祝安康，桃李满园</p>
+                    <p>您的学生们 敬上</p>
+                </div>
+            </div>           
+            <div class="quote">
+                "教育不是注满一桶水，而是点燃一把火。"<br>
+                感谢您点燃了我们心中的求知之火
+            </div>
+        </div>
+        
+        <div style="text-align: center;color: #777">
+            <p>© 高2025级11班学生感谢页面</p>
+        </div>
+    </div>
+    <script>
+        // 添加一些简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            
+            // 添加鼠标悬停效果
+            container.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            container.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+            
+            // 动态更新年份
+            const yearElement = document.querySelector('.footer p:last-child');
+            const currentYear = new Date().getFullYear();
+            yearElement.textContent = `© ${currentYear} 学生感谢页面`;
+            
+            // 添加点击效果
+            const letter = document.querySelector('.letter');
+            letter.addEventListener('click', function() {
+                this.style.boxShadow = '0 6px 20px rgba(52, 152, 219, 0.15)';
+                setTimeout(() => {
+                    this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.03)';
+                }, 300);
+            });
+        });
+        
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('wechatModal').style.display = 'none';
+        }
+        
+        // 点击模态框外部关闭
+        document.getElementById('wechatModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
